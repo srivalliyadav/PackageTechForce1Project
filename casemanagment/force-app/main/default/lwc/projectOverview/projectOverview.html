@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Projects Linked to Accounts">
+        <lightning-combobox
+            label="Filter by Project Type"
+            value={selectedFilter}
+            options={filterOptions}
+            onchange={handleFilterChange}>
+        </lightning-combobox>
+        
+        <template if:true={projects}>
+            <lightning-datatable
+                key-field="id"
+                data={projects}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        
+        <template if:true={error}>
+            <div class="slds-text-color_error">{error}</div>
+        </template>
+    </lightning-card>
+</template>

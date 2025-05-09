@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Product Margin Calculator">
+        <div class="slds-m-around_medium">
+            <template if:true={products}>
+                <ul>
+                    <template for:each={products} for:item="product">
+                        <li key={product.Id}>
+                            <div>{product.Product2.Name}</div>
+                            <div>Price: {product.UnitPrice}</div>
+                            <div>Quantity: {product.Quantity}</div>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+
+            <div>Total Cost Price: {totalCostPrice}</div>
+            <div>Total Sales Price: {totalSalesPrice}</div>
+            <div>Daily Margin: {dailyMargin}</div>
+            <div>Monthly Margin: {monthlyMargin}</div>
+        </div>
+    </lightning-card>
+</template>

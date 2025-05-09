@@ -1,0 +1,22 @@
+<template>
+    <lightning-input label="Product ID" data-id="productId" value={productId} onchange={handleInputChange}></lightning-input>
+
+    <lightning-button label="Fetch Product" onclick={handleFetchProduct}></lightning-button>
+
+    <template if:true={productName}>
+        <p>Product Name: {productName}</p>
+        <lightning-input label="Quantity" type="number" data-id="quantity" value={quantity} onchange={handleInputChange}></lightning-input>
+
+        <p>Unit Cost: {unitCost}</p>
+        <p>Unit Sales Price: {unitSalesPrice}</p>
+
+        <lightning-button label="Calculate Margins" onclick={calculateMargins}></lightning-button>
+
+        <p>Total Cost: {totalCost}</p>
+        <p>Total Sales Price: {totalSalesPrice}</p>
+        <p>Per Day Cost: {perDayCost}</p>
+        <p>Per Day Sales Price: {perDaySalesPrice}</p>
+        <p>Daily Margin: {dailyMargin}</p>
+        <p>Monthly Margin: {monthlyMargin}</p>
+    </template>
+</template>

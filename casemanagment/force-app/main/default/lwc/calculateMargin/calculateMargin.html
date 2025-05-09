@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Margin " icon-name="standard:opportunity">
+    <div class="slds-p-around_medium">          
+                <lightning-input label="Sales Price" type="number" value={productPrice} onchange={handleProductPriceChange}></lightning-input>
+                <lightning-input label="Multiplier" type="number" value={multiplier} onchange={handleMultiplierChange}></lightning-input>
+                <lightning-input label="Total Cost Price (Opportunity)" type="number" value={totalCostPrice} disabled></lightning-input>
+                <lightning-input label="Total Sales Price (Opportunity)" type="number" value={totalSalesPrice} disabled></lightning-input>
+                <lightning-input label="Daily Margin" type="number" value={dailyMargin} disabled></lightning-input>
+                <lightning-input label="Monthly Margin" type="number" value={monthlyMargin} disabled></lightning-input>
+    </div>
+    </lightning-card>
+    </template>

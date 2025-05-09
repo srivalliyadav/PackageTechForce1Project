@@ -1,0 +1,14 @@
+<template>
+    <lightning-combobox name="product" label="Select Product" value={selectedProduct} placeholder="Select Product" options={productOptions} onchange={handleProductChange}></lightning-combobox>
+ 
+    <lightning-card title="Product Calculations">
+        <div class="slds-m-around_medium">
+            <p>Total Cost: {totalCost}</p>
+            <p>Total Sales Price: {totalSalesPrice}</p>
+            <p>Daily Margin: {dailyMargin}</p>
+            <p>Monthly Margin: {monthlyMargin}</p>
+            <p>Per Day Cost: {perDayCost}</p>
+            <p>Per Day Sales Price: {perDaySalesPrice}</p>
+        </div>
+    </lightning-card>
+</template>
